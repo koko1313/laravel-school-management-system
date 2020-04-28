@@ -1,0 +1,109 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%; /* заради sticky-footera */
+}
+
+/* sticky footer */
+footer, .push {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+/* край на sticky footer */
+
+/* От bootstrap менюто има margin-и, махаме ги */
+.navbar {
+margin-left: -15px;
+margin-right: -15px;
+}
+
+footer {
+    background-color: #555;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+pre {
+    white-space: pre-line;
+    font-family: Arial;
+}
+
+.table-hover-pointer tbody tr:hover{
+    cursor: pointer;
+}
+
+.hideByTerm, .hideByFor_class { display: none!important; }
+
+/* Бутоните за избор на оценка при въвеждане */
+.btn-grades {
+    min-width: 60px;
+}
+
+/* Самата оценка като текст */
+.grades span {
+    font-size: 1.5em;
+    user-select: none;
+    padding: 0 5px;
+    display: block;
+    float: left;
+    text-align: center;
+    transition-duration: 0.2s;
+}
+
+.grades span:hover {
+    border-radius: 10px;
+    background-color: #ccc;
+}
+
+/* Самата оценка като кутия */
+.grade {
+    position: relative;
+    display: inline-block;
+}
+
+.grade-context-menu {
+    font-size: 1.2em;
+    position: absolute;
+    z-index: 100;
+    top: 2.5em;
+    right: 1vw;
+    display: none;
+}
+
+.grade-context-menu a {
+    text-decoration: none;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+/* Собствена оценка - на текущия логнат учител */
+.own-grade {
+    cursor: pointer;
+}
+
+.grade-add-btn {
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+
+/* При мобилен изглед - когато се скриват филтрите на таблиците за оценките */
+@media (max-width: 767.98px) {
+    #filters-colapse {
+        padding: 0 10vw;
+        margin: 0 auto;
+        margin-top: 2vh;
+        border: 1px dashed lightgray;
+        border-top: none;
+    }
+}
+
+.btn-wrap-text {
+    white-space:normal;
+}
