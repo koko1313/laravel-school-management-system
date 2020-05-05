@@ -1,5 +1,3 @@
-AddHandler application/x-httpd-php71 .php .php5 .php4 .php3
-SetEnv PHPRC /home/tempor5/public_html/school_management_system/php.ini
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
@@ -16,13 +14,8 @@ SetEnv PHPRC /home/tempor5/public_html/school_management_system/php.ini
     RewriteCond %{REQUEST_URI} (.+)/$
     RewriteRule ^ %1 [L,R=301]
 
-    # Handle Front Controller...
+    # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
-
-# php -- BEGIN cPanel-generated handler, do not edit
-# This domain inherits the “PHP” package.
-# php -- END cPanel-generated handler, do not edit
-
